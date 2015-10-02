@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/wycleffsean/haypub.svg)](https://travis-ci.org/wycleffsean/haypub)
+[![Coverage Status](https://coveralls.io/repos/wycleffsean/haypub/badge.svg?branch=master&service=github)](https://coveralls.io/github/wycleffsean/haypub?branch=master)
 
 # Payhub
 
