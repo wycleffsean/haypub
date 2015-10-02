@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/wycleffsean/haypub.svg)](https://travis-ci.org/wycleffsean/haypub)
+[![Code Climate](https://codeclimate.com/github/wycleffsean/haypub/badges/gpa.svg)](https://codeclimate.com/github/wycleffsean/haypub)
 [![Coverage Status](https://coveralls.io/repos/wycleffsean/haypub/badge.svg?branch=master&service=github)](https://coveralls.io/github/wycleffsean/haypub?branch=master)
 [![security](https://hakiri.io/github/wycleffsean/haypub/master.svg)](https://hakiri.io/github/wycleffsean/haypub/master)
 
