@@ -3,6 +3,12 @@ Coveralls.wear!
 
 $LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
 require 'payhub'
+require 'webmock/rspec'
+require 'dotenv'
+Dotenv.load!
+#WebMock.allow_net_connect!(:net_http_connect_on_start => true)
+
+API_KEY = ENV['PAYHUB_API_KEY']
 
 def load_json_fixture(file)
   fixture_dir = File.expand_path('../fixtures', __FILE__)
