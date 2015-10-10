@@ -17,6 +17,13 @@ module Payhub
     attr_accessor :api_key
     def_delegators :merchant, :organization_id=, :terminal_id=
 
+    def recurring_bill(&block)
+      hash = HashBuilder.new(&block).hash
+      bill = Transactions::RecurringBill.new hash
+      bill.merchant = merchant
+      bill
+    end
+
     def merchant
       @merchant ||= Merchant.new
     end
