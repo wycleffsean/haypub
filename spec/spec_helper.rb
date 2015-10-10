@@ -3,10 +3,6 @@ CodeClimate::TestReporter.start
 
 $LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
 require 'payhub'
-require 'dotenv'
-Dotenv.load!
-
-API_KEY = ENV['PAYHUB_API_KEY']
 
 def load_json_fixture(file)
   fixture_dir = File.expand_path('../fixtures', __FILE__)
