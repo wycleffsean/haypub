@@ -2,23 +2,25 @@ require 'spec_helper'
 
 describe Payhub do
   let(:api_key) { SecureRandom.uuid }
-  before { Payhub.api_key = api_key }
+  let(:organization_id) { rand(10000..99999) }
+  let(:terminal_id) { rand(100..999) }
+  before {
+    Payhub.api_key = api_key
+    Payhub.organization_id = organization_id
+    Payhub.terminal_id = terminal_id
+  }
 
   it 'has a version number' do
     expect(Payhub::VERSION).not_to be nil
   end
 
   it('has an api_key') { expect(Payhub.api_key).to eq(api_key) }
-
-  describe '.create_recurring_bill' do
-    before do
-      Payhub.create_recurring_bill do
-      end
+  describe '.merchant' do
+    it 'uses organization_id' do
+      expect(Payhub.merchant.organization_id).to eq organization_id
     end
-    it 'sets authorization header' do
-      expect(a_request(:post, Payhub::SANDBOX_URI.to_s).
-         with(headers: {'Authorization' => "Bearer #{api_key}"})).
-           to have_been_made.once
+    it 'uses terminal_id' do
+      expect(Payhub.merchant.terminal_id).to eq terminal_id
     end
   end
 end
