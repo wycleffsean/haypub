@@ -1,0 +1,9 @@
+{
+  "schedule_type": "M",
+  "monthly_schedule": {
+    "monthly_type": "O",
+    "monthly_on_the_day_of_week_in_month": 5,
+    "monthly_day_of_week": 7,
+    "monthly_each_days": null
+  }
+}

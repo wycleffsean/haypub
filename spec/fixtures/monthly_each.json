@@ -1,0 +1,9 @@
+{
+  "schedule_type": "M",
+  "monthly_schedule": {
+    "monthly_type": "E",
+    "monthly_on_the_day_of_week_in_month": null,
+    "monthly_day_of_week": null,
+    "monthly_each_days": [1,32]
+  }
+}
