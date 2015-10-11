@@ -5,5 +5,15 @@ require "payhub"
 
 # You can add fixtures and/or initialization code here to make experimenting
 # with your gem easier. You can also use a different console, if you like.
+begin
+  require 'dotenv'
+  Dotenv.load!
+  Payhub.api_key = ENV['PAYHUB_API_KEY']
+  Payhub.organization_id = ENV['PAYHUB_ORGANIZATION_ID']
+  Payhub.terminal_id = ENV['PAYHUB_TERMINAL_ID']
+rescue Errno::ENOENT => e
+  puts 'missing .env file'
+end
+
 require "pry"
 Pry.start
