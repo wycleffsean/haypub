@@ -5,7 +5,7 @@ module Payhub::Schedule
     context "monthly - 'on the'" do
       let(:json) { load_json_fixture('monthly_on_the.json') }
       let(:week) { 5 }
-      let(:day) { 7 }
+      let(:day) { :sat }
       let(:schedule) {
         Monthly.new(:O, week, day)
       }

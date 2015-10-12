@@ -1,6 +1,7 @@
 require 'virtus'
 require 'payhub/version'
 require 'payhub/hash_builder'
+require 'payhub/attributes'
 require 'payhub/merchant'
 require 'payhub/amount'
 require 'payhub/bill'

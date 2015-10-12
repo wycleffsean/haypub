@@ -85,7 +85,7 @@ Bill on the 3rd Sunday of every month
 ```ruby
   Payhub.create_recurring_bill do
     ...
-    schedule Schedule::Monthly.new(:O, 3, 1)
+    schedule Schedule::Monthly.new(:O, 3, :sunday)
   end
 ```
 

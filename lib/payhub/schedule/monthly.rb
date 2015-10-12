@@ -6,7 +6,7 @@ module Payhub
       attribute :monthly_type,                        String
       attribute :monthly_each_days,                   Array[Integer]
       attribute :monthly_on_the_day_of_week_in_month, Integer
-      attribute :monthly_day_of_week,                 Integer
+      attribute :monthly_day_of_week,                 DayInteger
 
       def initialize(_args)
         type, *args = _args
@@ -16,7 +16,7 @@ module Payhub
           self.monthly_each_days = range(args, 1..32)
         when :O
           self.monthly_on_the_day_of_week_in_month = range(args[0], 1..5)
-          self.monthly_day_of_week = range(args[1], 1..7)
+          self.monthly_day_of_week = args[1]
         else raise ArgumentError.new('uknown monthly_type')
         end
       end
