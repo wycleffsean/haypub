@@ -1,0 +1,6 @@
+{
+  "schedule_type": "W",
+  "weekly_schedule": {
+    "weekly_bill_days": ["SUN","WED","SAT"]
+  }
+}

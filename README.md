@@ -89,6 +89,17 @@ Bill on the 3rd Sunday of every month
   end
 ```
 
+### Weekly Scheduling
+
+Bill on Monday and Friday every week
+
+```ruby
+  Payhub.create_recurring_bill do
+    ...
+    schedule Schedule::Weekly.new(:mon, :fri)
+  end
+```
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
