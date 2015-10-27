@@ -1,3 +1,4 @@
+require 'payhub/schedule/interval'
 require 'payhub/schedule/specific_dates'
 require 'payhub/schedule/monthly'
 require 'payhub/schedule/weekly'

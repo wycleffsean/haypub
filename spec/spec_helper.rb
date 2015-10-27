@@ -4,6 +4,8 @@ CodeClimate::TestReporter.start
 $LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
 require 'payhub'
 require 'dotenv'
+Dir[File.expand_path('../support/**/*.rb', __FILE__)]
+  .each { |f| require f }
 
 begin
   Dotenv.load!
